@@ -32,6 +32,18 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
+  // Language switcher: remember the choice so the root redirector honours it, then jump to the
+  // same page under the chosen language.
+  var sel = document.getElementById('lang-select');
+  if (sel) {
+    sel.addEventListener('change', function () {
+      var lang = sel.value;
+      try { localStorage.setItem('sp-lang', lang); } catch (e) {}
+      var page = sel.getAttribute('data-page') || '';
+      window.location.href = '/' + lang + '/' + page + window.location.hash;
+    });
+  }
+
   // Footer year
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();

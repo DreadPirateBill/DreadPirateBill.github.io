@@ -1,0 +1,22 @@
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/{{lang}}/"><img src="/assets/img/icon.png" alt="" width="32" height="32"> Sprocket Player</a>
+    <button class="nav-toggle" aria-label="{{nav.menu}}" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="/{{lang}}/#formats">{{nav.formats}}</a>
+      <a href="/{{lang}}/#companion">{{nav.library}}</a>
+      <a href="/{{lang}}/#intro">{{nav.intro}}</a>
+      <a href="/{{lang}}/#direct">{{nav.direct}}</a>
+      <a href="/{{lang}}/#privacy">{{nav.privacy}}</a>
+      <a href="/{{lang}}/support.html" data-page="support">{{nav.support}}</a>
+      <label class="lang-switch">
+        <span class="sr-only">{{nav.language}}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
+        <select id="lang-select" aria-label="{{nav.language}}" data-page="{{page_path}}">
+{{lang_options}}
+        </select>
+      </label>
+      <a class="btn sm primary" href="/{{lang}}/#download">{{nav.get_app}}</a>
+    </nav>
+  </div>
+</header>

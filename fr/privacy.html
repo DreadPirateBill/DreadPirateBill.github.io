@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Sprocket Player</title>
+<meta name="description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<meta name="theme-color" content="#07090d">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="canonical" href="https://sprocketplayer.com/fr/privacy.html">
+<link rel="alternate" hreflang="en" href="https://sprocketplayer.com/en/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://sprocketplayer.com/fr/privacy.html">
+<link rel="alternate" hreflang="de" href="https://sprocketplayer.com/de/privacy.html">
+<link rel="alternate" hreflang="es" href="https://sprocketplayer.com/es/privacy.html">
+<link rel="alternate" hreflang="it" href="https://sprocketplayer.com/it/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://sprocketplayer.com/ja/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://sprocketplayer.com/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy Policy — Sprocket Player">
+<meta property="og:description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<meta property="og:image" content="https://sprocketplayer.com/assets/img/hero-plate.jpg">
+<meta property="og:url" content="https://sprocketplayer.com/fr/privacy.html">
+<meta property="og:locale" content="fr">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/fr/"><img src="/assets/img/icon.png" alt="" width="32" height="32"> Sprocket Player</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="/fr/#formats">Formats</a>
+      <a href="/fr/#companion">Your library</a>
+      <a href="/fr/#intro">Skip Intro</a>
+      <a href="/fr/#direct">Direct play</a>
+      <a href="/fr/#privacy">Privacy</a>
+      <a href="/fr/support.html" data-page="support">Support</a>
+      <label class="lang-switch">
+        <span class="sr-only">Language</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
+        <select id="lang-select" aria-label="Language" data-page="privacy.html">
+<option value="en">English</option>
+<option value="fr" selected>Français</option>
+<option value="de">Deutsch</option>
+<option value="es">Español</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+        </select>
+      </label>
+      <a class="btn sm primary" href="/fr/#download">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="page">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Privacy</p>
+      <h1>Sprocket Player Privacy Policy</h1>
+      <p class="updated">Last updated: June 18, 2026</p>
+    </div>
+
+    <div class="prose">
+      <p>Sprocket Player is a media browser and player for iPad and Apple TV. This document describes what data the app handles and what happens to it.</p>
+
+      <h2>What Sprocket Player does with your data</h2>
+      <p><strong>Local-only by design.</strong> Sprocket Player connects to file shares on your local network (SMB, NFS) and reads from your device's photo library to display and play your photos and videos. The app does not have its own backend server, does not require an account, and does not transmit your media or browsing activity to us or to any third party.</p>
+      <p><strong>Source credentials.</strong> Usernames and passwords for SMB and NFS shares you configure are stored locally on your device in the iOS/tvOS Keychain. They never leave your device.</p>
+      <p><strong>Preferences and thumbnails.</strong> Your settings, source lists, watched-state, and generated thumbnails are stored locally on your device. When a source is marked as secured with a PIN, the associated thumbnails and preference records are encrypted at rest using AES-256-GCM via Apple's CryptoKit. The encryption keys are derived from the PIN and stored in the Keychain.</p>
+
+      <h2>Crash and performance data</h2>
+      <p>Sprocket Player uses <a href="https://sentry.io">Sentry</a> to capture crash reports and basic performance metrics. This data is sent to Sentry's servers, used only to identify and fix bugs, and is not linked to your identity or used for tracking.</p>
+      <p>The categories of data Sentry collects:</p>
+      <ul>
+        <li><strong>Crash data:</strong> stack traces, device model, OS version, app version, and the state of the app at the moment of a crash</li>
+        <li><strong>Performance data:</strong> anonymous timing and resource-usage metrics</li>
+      </ul>
+      <p>No personally identifying information, no media files, no source credentials, and no contents of your photo library are ever sent to Sentry or anywhere else.</p>
+
+      <h2>Network access</h2>
+      <p>Sprocket Player uses your device's local network access to discover SMB shares via Bonjour and to connect to file shares you configure. iOS will prompt you to grant local network permission the first time the app needs it. The app does not connect to any servers on the public internet other than Sentry (for crash reporting, as described above).</p>
+
+      <h2>Children's privacy</h2>
+      <p>Sprocket Player is not directed at children under 13 and does not knowingly collect any personal information from children.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this policy, email <a href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>Updates to this policy will be posted at this URL with a revised "Last updated" date.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin and Kodi are trademarks of their respective owners.</div>
+    <nav>
+      <a href="/fr/">Home</a>
+      <a href="/fr/support.html">Support</a>
+      <a href="/fr/privacy.html">Privacy</a>
+      <a href="mailto:support@sprocketplayer.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+
+</body>
+</html>

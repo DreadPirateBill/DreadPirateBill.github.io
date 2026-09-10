@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+{{> head title="policy.meta.title" description="policy.meta.description"}}
+</head>
+<body>
+
+{{> nav}}
+
+<main class="page">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">{{policy.eyebrow}}</p>
+      <h1>{{policy.title}}</h1>
+      <p class="updated">{{policy.updated}}</p>
+    </div>
+
+    <div class="prose">
+      <p>{{policy.intro}}</p>
+
+      <h2>{{policy.data.title}}</h2>
+      <p><strong>{{policy.data.local_lead}}</strong> {{policy.data.local}}</p>
+      <p><strong>{{policy.data.creds_lead}}</strong> {{policy.data.creds}}</p>
+      <p><strong>{{policy.data.prefs_lead}}</strong> {{policy.data.prefs}}</p>
+
+      <h2>{{policy.crash.title}}</h2>
+      <p>{{policy.crash.p1_before}} <a href="https://sentry.io">Sentry</a> {{policy.crash.p1_after}}</p>
+      <p>{{policy.crash.p2}}</p>
+      <ul>
+        <li><strong>{{policy.crash.li1_lead}}</strong> {{policy.crash.li1}}</li>
+        <li><strong>{{policy.crash.li2_lead}}</strong> {{policy.crash.li2}}</li>
+      </ul>
+      <p>{{policy.crash.p3}}</p>
+
+      <h2>{{policy.network.title}}</h2>
+      <p>{{policy.network.body}}</p>
+
+      <h2>{{policy.children.title}}</h2>
+      <p>{{policy.children.body}}</p>
+
+      <h2>{{policy.contact.title}}</h2>
+      <p>{{policy.contact.body}} <a href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>.</p>
+
+      <h2>{{policy.changes.title}}</h2>
+      <p>{{policy.changes.body}}</p>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+</body>
+</html>

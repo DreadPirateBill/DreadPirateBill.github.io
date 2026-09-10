@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+{{> head title="index.meta.title" description="index.meta.description"}}
+</head>
+<body>
+
+{{> nav}}
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">{{hero.eyebrow}}</p>
+      <h1>{{hero.title_a}}<br><span class="grad">{{hero.title_b}}</span></h1>
+      <p class="lede">{{hero.lede}}</p>
+      <div class="cta">
+        <a class="btn primary" href="#download">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.28-1.61 2.8-.41 6.93 1.16 9.2.77 1.11 1.68 2.36 2.87 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.25-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+          {{hero.cta_download}}
+        </a>
+        <a class="btn" href="#formats">{{hero.cta_formats}}</a>
+      </div>
+      <p class="note">{{hero.requirements}}</p>
+    </div>
+
+    <div class="hero-shot reveal">
+      <div class="device tv">
+        <img class="shot-img" src="/assets/img/screenshots/hero-library.png" alt="">
+        <div class="placeholder">
+          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <div class="ph-title">Hero shot — Apple TV library view</div>
+          <div class="ph-file">assets/img/screenshots/hero-library.png</div>
+          <div class="ph-hint">A movie or TV library with rich poster art, 1920×1080 or 3840×2160.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMATS ============ -->
+<section id="formats" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>{{formats.title_a}} <span class="grad">{{formats.title_b}}</span></h2>
+      <p>{{formats.lede}}</p>
+    </div>
+
+    <div class="format-grid">
+      <div class="format-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="1.8" aria-hidden="true"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#29c6ff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="url(#g1)" stroke="none"/></svg> {{formats.video.title}}</h3>
+        <p>{{formats.video.body}}</p>
+        <div class="chips">
+          <span class="chip hi">MKV</span><span class="chip hi">MP4</span><span class="chip hi">M4V</span><span class="chip hi">MOV</span>
+          <span class="chip">AVI</span><span class="chip">M2TS</span><span class="chip">TS</span><span class="chip">MTS</span>
+          <span class="chip">WebM</span><span class="chip">WMV</span><span class="chip">MPG</span><span class="chip">FLV</span>
+          <span class="chip">OGM</span><span class="chip">ISO</span><span class="chip">3GP</span>
+        </div>
+      </div>
+      <div class="format-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="url(#g2)" stroke-width="1.8" aria-hidden="true"><defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#29c6ff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg> {{formats.photos.title}}</h3>
+        <p>{{formats.photos.body}}</p>
+        <div class="chips">
+          <span class="chip warm">JPEG</span><span class="chip warm">HEIC</span><span class="chip warm">PNG</span>
+          <span class="chip">GIF</span><span class="chip">BMP</span><span class="chip">HEIF</span><span class="chip">{{formats.photos.icloud}}</span>
+        </div>
+      </div>
+      <div class="format-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="url(#g3)" stroke-width="1.8" aria-hidden="true"><defs><linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#29c6ff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg> {{formats.docs.title}}</h3>
+        <p>{{formats.docs.body}}</p>
+        <div class="chips">
+          <span class="chip">PDF</span><span class="chip">CBZ</span><span class="chip">CBR</span><span class="chip">TXT</span><span class="chip">NFO</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="shot-caption reveal" style="margin-top:1.5rem">{{formats.sources}}</p>
+  </div>
+</section>
+
+<!-- ============ COMPANION ============ -->
+<section id="companion">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">{{companion.eyebrow}}</p>
+        <h2>{{companion.title_a}} <span class="grad">{{companion.title_b}}</span></h2>
+        <p class="lead">{{companion.lede}}</p>
+        <ul>
+          <li>{{companion.point1}}</li>
+          <li>{{companion.point2}}</li>
+          <li>{{companion.point3}}</li>
+          <li>{{companion.point4}}</li>
+          <li>{{companion.point5}}</li>
+        </ul>
+        <div class="servers">
+          <div class="server"><div class="dot plex">P</div><div><strong>Plex</strong><span>{{companion.plex}}</span></div></div>
+          <div class="server"><div class="dot jelly">J</div><div><strong>Jellyfin</strong><span>{{companion.jellyfin}}</span></div></div>
+          <div class="server"><div class="dot kodi">K</div><div><strong>Kodi</strong><span>{{companion.kodi}}</span></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/library-show.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <div class="ph-title">TV show detail with scraped metadata</div>
+            <div class="ph-file">assets/img/screenshots/library-show.png</div>
+            <div class="ph-hint">A show or season view with fanart, episode thumbnails and summaries visible.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{companion.caption}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO DETECTION ============ -->
+<section id="intro" class="band">
+  <div class="wrap">
+    <div class="feature flip">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">{{intro.eyebrow}}</p>
+        <h2>{{intro.title_a}} <span class="grad">{{intro.title_b}}</span></h2>
+        <p class="lead">{{intro.lede}}</p>
+        <ul>
+          <li>{{intro.point1}}</li>
+          <li>{{intro.point2}}</li>
+          <li>{{intro.point3}}</li>
+          <li>{{intro.point4}}</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/player-skip-intro.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l10 7-10 7zM17 5h2v14h-2z"/></svg>
+            <div class="ph-title">Player with “Skip Intro” showing</div>
+            <div class="ph-file">assets/img/screenshots/player-skip-intro.png</div>
+            <div class="ph-hint">Mid-title-sequence with the Skip Intro button on screen. Transport controls hidden if possible.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{intro.caption}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECT PLAY ============ -->
+<section id="direct">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">{{direct.eyebrow}}</p>
+        <h2>{{direct.title_a}} <span class="grad">{{direct.title_b}}</span></h2>
+        <p class="lead">{{direct.lede}}</p>
+        <ul>
+          <li>{{direct.point1}}</li>
+          <li>{{direct.point2}}</li>
+          <li>{{direct.point3}}</li>
+          <li>{{direct.point4}}</li>
+        </ul>
+        <div class="flow">
+          <div class="node"><strong>{{direct.flow.source}}</strong><span>{{direct.flow.source_sub}}</span></div>
+          <div class="link">{{direct.flow.link}}<div class="bar"></div><span class="strike">{{direct.flow.strike}}</span></div>
+          <div class="node"><strong>{{direct.flow.device}}</strong><span>{{direct.flow.device_sub}}</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/player-tracks.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            <div class="ph-title">Playback with track selection</div>
+            <div class="ph-file">assets/img/screenshots/player-tracks.png</div>
+            <div class="ph-hint">Full-screen video with the audio / subtitle picker open, ideally a multi-track MKV.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{direct.caption}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section id="privacy" class="band">
+  <div class="wrap">
+    <div class="feature flip">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">{{privacy.eyebrow}}</p>
+        <h2>{{privacy.title_a}} <span class="grad">{{privacy.title_b}}</span></h2>
+        <p class="lead">{{privacy.lede}}</p>
+        <div class="pillars">
+          <div class="pillar">
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg> {{privacy.local.title}}</strong>
+            <p>{{privacy.local.body}}</p>
+          </div>
+          <div class="pillar">
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> {{privacy.keychain.title}}</strong>
+            <p>{{privacy.keychain.body}}</p>
+          </div>
+          <div class="pillar">
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> {{privacy.pin.title}}</strong>
+            <p>{{privacy.pin.body}}</p>
+          </div>
+          <div class="pillar">
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.4 5.6L5.6 18.4M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg> {{privacy.disconnect.title}}</strong>
+            <p>{{privacy.disconnect.body}}</p>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.25rem;color:var(--faint);font-size:0.88rem">{{privacy.note}} <a href="/{{lang}}/privacy.html" style="color:var(--cyan)">{{privacy.note_link}}</a></p>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/sources-setup.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+            <div class="ph-title">Sources / Setup or Privacy options</div>
+            <div class="ph-file">assets/img/screenshots/sources-setup.png</div>
+            <div class="ph-hint">Either the Add Source form with the PIN field, or Options → Privacy with the disconnect settings.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{privacy.caption}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORE ============ -->
+<section id="more">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>{{more.title_a}} <span class="grad">{{more.title_b}}</span></h2>
+      <p>{{more.lede}}</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#29c6ff" stroke-width="1.8" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 18v3M8 21h8"/></svg></div>
+        <h3>{{more.devices.title}}</h3>
+        <p>{{more.devices.body}}</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg></div>
+        <h3>{{more.wallpapers.title}}</h3>
+        <p>{{more.wallpapers.body}}</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h6"/><path d="M18 14l3 3-3 3"/></svg></div>
+        <h3>{{more.sort.title}}</h3>
+        <p>{{more.sort.body}}</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#29c6ff" stroke-width="1.8" aria-hidden="true"><path d="M3 7h5l2 2h11v10H3z"/><path d="M3 7V5h7"/></svg></div>
+        <h3>{{more.collections.title}}</h3>
+        <p>{{more.collections.body}}</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>{{more.slideshows.title}}</h3>
+        <p>{{more.slideshows.body}}</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M7 9h2M11 9h6M7 13h10"/></svg></div>
+        <h3>{{more.localised.title}}</h3>
+        <p>{{more.localised.body}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="band">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>{{gallery.title}}</h2>
+    </div>
+    <div class="gallery">
+      <div class="reveal">
+        <div class="device ipad">
+          <img class="shot-img" src="/assets/img/screenshots/ipad-library.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="18" r="0.8"/></svg>
+            <div class="ph-title">iPad — library view</div>
+            <div class="ph-file">assets/img/screenshots/ipad-library.png</div>
+            <div class="ph-hint">Landscape iPad, 4:3, showing the browser with posters.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{gallery.ipad_library}}</p>
+      </div>
+      <div class="reveal">
+        <div class="device ipad">
+          <img class="shot-img" src="/assets/img/screenshots/ipad-photos.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="18" r="0.8"/></svg>
+            <div class="ph-title">iPad — photos or documents</div>
+            <div class="ph-file">assets/img/screenshots/ipad-photos.png</div>
+            <div class="ph-hint">Landscape iPad, 4:3. A photo grid, or a comic / PDF open in the reader.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{gallery.ipad_photos}}</p>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/photos-gallery.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <div class="ph-title">Apple TV — photo gallery</div>
+            <div class="ph-file">assets/img/screenshots/photos-gallery.png</div>
+            <div class="ph-hint">A photo folder or slideshow on tvOS, 16:9.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{gallery.tv_photos}}</p>
+      </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/documents-comic.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <div class="ph-title">Apple TV — comic or PDF reader</div>
+            <div class="ph-file">assets/img/screenshots/documents-comic.png</div>
+            <div class="ph-hint">A CBZ/CBR or PDF page open full-screen on tvOS, 16:9.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{gallery.tv_docs}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section class="closing" id="download">
+  <div class="wrap reveal">
+    <img src="/assets/img/icon.png" alt="Sprocket Player" width="96" height="96">
+    <h2>{{download.title_a}} <span class="grad">{{download.title_b}}</span></h2>
+    <p>{{download.lede}}</p>
+    <div class="cta">
+      <a class="btn primary" href="#" id="appstore-link" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.28-1.61 2.8-.41 6.93 1.16 9.2.77 1.11 1.68 2.36 2.87 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.25-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+        {{hero.cta_download}}
+      </a>
+      <a class="btn" href="/{{lang}}/support.html">{{download.cta_support}}</a>
+    </div>
+    <p class="note" style="margin-top:1rem;font-size:0.85rem;color:var(--faint)">{{download.coming_soon}}</p>
+  </div>
+</section>
+
+</main>
+
+{{> footer}}
+</body>
+</html>
