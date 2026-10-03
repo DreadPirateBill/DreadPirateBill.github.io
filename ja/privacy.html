@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Sprocket Player</title>
-<meta name="description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<title>プライバシーポリシー — Sprocket Player</title>
+<meta name="description" content="Sprocket Playerが保存するもの、接続する先、そして決して行わないこと。アカウントなし、トラッキングなし、クラウドなし。">
 <meta name="theme-color" content="#07090d">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="ja" href="https://sprocketplayer.com/ja/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://sprocketplayer.com/privacy.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy Policy — Sprocket Player">
-<meta property="og:description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<meta property="og:title" content="プライバシーポリシー — Sprocket Player">
+<meta property="og:description" content="Sprocket Playerが保存するもの、接続する先、そして決して行わないこと。アカウントなし、トラッキングなし、クラウドなし。">
 <meta property="og:image" content="https://sprocketplayer.com/assets/img/hero-plate.jpg">
 <meta property="og:url" content="https://sprocketplayer.com/ja/privacy.html">
 <meta property="og:locale" content="ja">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=b0d3a0cc">
 
 </head>
 <body>
@@ -34,18 +34,18 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="/ja/"><img src="/assets/img/icon.png" alt="" width="32" height="32"> Sprocket Player</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="nav-links">☰</button>
     <nav class="nav-links" id="nav-links">
-      <a href="/ja/#formats">Formats</a>
-      <a href="/ja/#companion">Your library</a>
-      <a href="/ja/#intro">Skip Intro</a>
-      <a href="/ja/#direct">Direct play</a>
-      <a href="/ja/#privacy">Privacy</a>
-      <a href="/ja/support.html" data-page="support">Support</a>
+      <a href="/ja/#formats">対応形式</a>
+      <a href="/ja/#companion">ライブラリ</a>
+      <a href="/ja/#intro">イントロをスキップ</a>
+      <a href="/ja/#direct">再生</a>
+      <a href="/ja/#privacy">プライバシー</a>
+      <a href="/ja/support.html" data-page="support">サポート</a>
       <label class="lang-switch">
-        <span class="sr-only">Language</span>
+        <span class="sr-only">言語</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
-        <select id="lang-select" aria-label="Language" data-page="privacy.html">
+        <select id="lang-select" aria-label="言語" data-page="privacy.html">
 <option value="en">English</option>
 <option value="fr">Français</option>
 <option value="de">Deutsch</option>
@@ -54,7 +54,7 @@
 <option value="ja" selected>日本語</option>
         </select>
       </label>
-      <a class="btn sm primary" href="/ja/#download">Get the app</a>
+      <a class="btn sm primary" href="/ja/#download">アプリを入手</a>
     </nav>
   </div>
 </header>
@@ -63,56 +63,91 @@
 <main class="page">
   <div class="wrap">
     <div class="page-head">
-      <p class="eyebrow">Privacy</p>
-      <h1>Sprocket Player Privacy Policy</h1>
-      <p class="updated">Last updated: June 18, 2026</p>
+      <p class="eyebrow">プライバシー</p>
+      <h1>Sprocket Playerプライバシーポリシー</h1>
+      <p class="updated">最終更新日：2026年10月3日</p>
     </div>
 
     <div class="prose">
-      <p>Sprocket Player is a media browser and player for iPad and Apple TV. This document describes what data the app handles and what happens to it.</p>
+      <p>Sprocket Playerは、Apple TVとiPadのためのメディアブラウザ兼プレーヤーです。このポリシーでは、アプリが保存するもの、接続する先、そして決して行わないことについて説明します。</p>
 
-      <h2>What Sprocket Player does with your data</h2>
-      <p><strong>Local-only by design.</strong> Sprocket Player connects to file shares on your local network (SMB, NFS) and reads from your device's photo library to display and play your photos and videos. The app does not have its own backend server, does not require an account, and does not transmit your media or browsing activity to us or to any third party.</p>
-      <p><strong>Source credentials.</strong> Usernames and passwords for SMB and NFS shares you configure are stored locally on your device in the iOS/tvOS Keychain. They never leave your device.</p>
-      <p><strong>Preferences and thumbnails.</strong> Your settings, source lists, watched-state, and generated thumbnails are stored locally on your device. When a source is marked as secured with a PIN, the associated thumbnails and preference records are encrypted at rest using AES-256-GCM via Apple's CryptoKit. The encryption keys are derived from the PIN and stored in the Keychain.</p>
-
-      <h2>Crash and performance data</h2>
-      <p>Sprocket Player uses <a href="https://sentry.io">Sentry</a> to capture crash reports and basic performance metrics. This data is sent to Sentry's servers, used only to identify and fix bugs, and is not linked to your identity or used for tracking.</p>
-      <p>The categories of data Sentry collects:</p>
+      <h2>要点</h2>
       <ul>
-        <li><strong>Crash data:</strong> stack traces, device model, OS version, app version, and the state of the app at the moment of a crash</li>
-        <li><strong>Performance data:</strong> anonymous timing and resource-usage metrics</li>
+        <li>Sprocketのアカウントも、Sprocketのサーバーもありません。私たちが、あなたのメディア、ライブラリ、視聴状況を受け取ることはありません。</li>
+        <li>アプリが接続するのは、あなたが追加したファイル共有とメディアサーバー、そしてPlexをお使いの場合はあなたのPlexアカウントだけです。唯一の例外であるキャストの写真については、後述します。</li>
+        <li>広告も、トラッキングも、利用状況の分析もありません。</li>
+        <li>クラッシュレポートはデフォルトでオフになっており、あなたがオンにした場合にのみ送信されます。</li>
       </ul>
-      <p>No personally identifying information, no media files, no source credentials, and no contents of your photo library are ever sent to Sentry or anywhere else.</p>
 
-      <h2>Network access</h2>
-      <p>Sprocket Player uses your device's local network access to discover SMB shares via Bonjour and to connect to file shares you configure. iOS will prompt you to grant local network permission the first time the app needs it. The app does not connect to any servers on the public internet other than Sentry (for crash reporting, as described above).</p>
+      <h2>デバイスに保存されるもの</h2>
+      <p>Sprocket Playerが記憶する情報は、すべてアプリをお使いのデバイス上に保存されます。</p>
+      <ul>
+        <li><strong>サインイン情報：</strong> ファイル共有のパスワードと、メディアサーバーのサインイントークンは、システムのキーチェーンに保存されます。</li>
+        <li><strong>前回のままのライブラリ：</strong> 追加したソースのリスト、設定、視聴済みの項目、再生を止めた位置です。</li>
+        <li><strong>サムネイルと詳細情報：</strong> サムネイルと、ライブラリに表示されるタイトルや説明は、アプリが再度取得しなくて済むように保存されます。</li>
+      </ul>
+      <p>保存されたサムネイルとライブラリの詳細情報は、デバイスの外に出ることのない鍵を使って、デバイス上で常に暗号化されます。ソースをPINで保護すると、そのPINが鍵の一部になるため、PINなしではそれらの項目を読み取れません。</p>
 
-      <h2>Children's privacy</h2>
-      <p>Sprocket Player is not directed at children under 13 and does not knowingly collect any personal information from children.</p>
+      <h2>アプリが接続する先</h2>
+      <p>Sprocket Playerは、あなたが指定した場所に接続します。唯一の例外はキャストの写真で、以下で説明します。</p>
 
-      <h2>Contact</h2>
-      <p>If you have questions about this policy, email <a href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>.</p>
+      <h3>ローカルネットワーク</h3>
+      <p>アプリは、あなたの許可を得たうえで、ローカルネットワーク上のファイル共有（SMB、NFS）とメディアサーバー（Plex、Jellyfin、Emby）を探して候補として表示し、あなたが追加したものに接続します。初めて必要になったときに、デバイスがローカルネットワークへのアクセスを許可するかどうかを確認します。</p>
 
-      <h2>Changes to this policy</h2>
-      <p>Updates to this policy will be posted at this URL with a revised "Last updated" date.</p>
+      <h3>メディアサーバー</h3>
+      <p>Plex、Jellyfin、Embyのサーバーを追加すると、アプリはそのサーバーにサインインし、ライブラリ、アートワーク、動画を要求します。サーバーは、サインイン情報とともに、アプリの名前とバージョン、デバイスのラベル、そしてこのインストールのために作成されたランダムな識別子を受け取ります。これは、サーバーがSprocket Playerを認証済みデバイスの一覧に表示できるようにするためです。この識別子がほかの誰かと共有されることはありません。</p>
+      <p>サーバーは、自身の設定とプライバシー規約に従って、受け取ったリクエストの記録を独自に保持します。Sprocket Playerは、あなたが視聴したものの記録を独自にデバイス上に保持し、サーバー上の視聴済み状態を読み取ることも変更することもありません。ホームネットワークの外にあるサーバーに接続する場合、その接続はインターネットを経由してそのサーバーに届きます。</p>
+
+      <h3>Plexアカウント</h3>
+      <p>Plexのサインインは、あなたのサーバーではなく、plex.tvにあるPlex自身のサービスで処理されます。Plexをお使いの場合、アプリは次のときにplex.tvと通信します。コードでサインインするとき、どのサーバーを追加するかを選ぶとき、そしてこの方法で追加したサーバーに接続するたびに、サーバーの現在のアドレスを調べるときです。</p>
+      <p>これらのリクエストをPlexがどのように扱うかは、 <a href="https://www.plex.tv/about/privacy-legal/">Plexのプライバシーポリシー</a>に記載されています。JellyfinとEmbyのサインインは、あなた自身のサーバーとの間で直接行われ、外部のサービスは関与しません。Plexをお使いでない場合、アプリがplex.tvと通信することはありません。</p>
+
+      <h3>スマートフォンでの設定</h3>
+      <p>Apple TVでは、QRコードをスキャンして、接続フォームをスマートフォンで入力できます。このフォームが開いている間、Apple TVは1つのページをローカルネットワークに提供します。入力した内容は、QRコードに含まれる鍵を使ってスマートフォンのブラウザ内で暗号化され、あなたのApple TVにのみ送信されます。フォームを閉じると、このページはただちに利用できなくなります。ネットワークの外には何も送信されません。</p>
+
+      <h3>キャストの写真</h3>
+      <p>Kodiなどのツールが作成したライブラリファイルには、キャストの写真のWebアドレスが含まれていることがあります。ファイル共有上の映画や番組のキャスト一覧を開くと、アプリはファイルに記載されたアドレスからそれらの写真をダウンロードします。写真をホストしているサイトには、デバイスのインターネットアドレスと、要求された写真が伝わります。写真はメモリ上にのみ保持され、デバイスに保存されることはありません。ファイルにそのようなアドレスが含まれていない場合、通信は行われません。</p>
+
+      <h3>アプリが行わないこと</h3>
+      <p>Sprocket Playerは、メディアを識別したり照会したりするために、ライブラリの内容をオンラインサービスに送信することはありません。ポスターや説明は、あなた自身のサーバー、またはメディアと一緒に保存されたファイルから取得されます。イントロ検出やサムネイル生成などの機能は、すべてデバイス上で実行されます。</p>
+
+      <h2>写真ライブラリ</h2>
+      <p>あなたが許可した場合、Sprocket Playerはデバイス上の写真ライブラリを読み取り、写真と動画を表示します。これらはデバイス上で表示されるだけで、コピーされることも、どこかに送信されることもありません。</p>
+
+      <h2>クラッシュレポート</h2>
+      <p>クラッシュレポートはデフォルトでオフになっています。「オプション」で「クラッシュレポートを共有」をオンにしない限り、何も収集されません。また、いつでもオフに戻せます。</p>
+      <p>オンにすると、クラッシュとハングのレポートが、クラッシュレポートサービスである <a href="https://sentry.io">Sentry</a>に送信され、欧州連合（EU）域内に保存されます。レポートは、バグの発見と修正にのみ使用されます。レポートには次の情報が含まれます：</p>
+      <ul>
+        <li>スタックトレースや、その時点でのアプリの状態など、障害に関する技術的な詳細</li>
+        <li>デバイスのモデル、オペレーティングシステムのバージョン、アプリのバージョン</li>
+      </ul>
+      <p>レポートがあなたの身元と結び付けられることはなく、トラッキングに使用されることもありません。スクリーンショット、メディアファイル、サインイン情報、写真ライブラリの内容は一切含まれません。アプリは、利用セッションやパフォーマンストレースを記録しません。</p>
+
+      <h2>お子様のプライバシー</h2>
+      <p>Sprocket Playerは13歳未満のお子様を対象としておらず、お子様の個人情報を故意に収集することはありません。</p>
+
+      <h2>お問い合わせ</h2>
+      <p>このポリシーについてご質問がある場合は、次のアドレスまでメールでご連絡ください： <a class="email" data-u="support" data-d="sprocketplayer.com" href="/ja/support.html#contact">support [at] sprocketplayer.com</a>。</p>
+
+      <h2>このポリシーの変更</h2>
+      <p>このポリシーを更新した場合は、「最終更新日」を改めたうえで、このアドレスに掲載します。</p>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin and Kodi are trademarks of their respective owners.</div>
+    <div>© <span id="year">2026</span> Sprocket Player. Apple TV、iPad、SiriはApple Inc.の商標です。Plex、Jellyfin、Emby、Kodiは、それぞれの所有者の商標です。</div>
     <nav>
-      <a href="/ja/">Home</a>
-      <a href="/ja/support.html">Support</a>
-      <a href="/ja/privacy.html">Privacy</a>
-      <a href="mailto:support@sprocketplayer.com">Contact</a>
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/support.html">サポート</a>
+      <a href="/ja/privacy.html">プライバシー</a>
+      <a href="/ja/support.html#contact">お問い合わせ</a>
     </nav>
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
+<script src="/assets/js/site.js?v=b0d3a0cc"></script>
 
 </body>
 </html>

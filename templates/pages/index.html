@@ -57,7 +57,10 @@
           <span class="chip hi">MKV</span><span class="chip hi">MP4</span><span class="chip hi">M4V</span><span class="chip hi">MOV</span>
           <span class="chip">AVI</span><span class="chip">M2TS</span><span class="chip">TS</span><span class="chip">MTS</span>
           <span class="chip">WebM</span><span class="chip">WMV</span><span class="chip">MPG</span><span class="chip">FLV</span>
-          <span class="chip">OGM</span><span class="chip">ISO</span><span class="chip">3GP</span>
+          <span class="chip">OGM</span><span class="chip">3GP</span>
+        </div>
+        <div class="chips" style="margin-top:0.6rem">
+          <span class="chip warm">{{formats.video.subtitles}}</span><span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span>
         </div>
       </div>
       <div class="format-card reveal">
@@ -96,11 +99,6 @@
           <li>{{companion.point4}}</li>
           <li>{{companion.point5}}</li>
         </ul>
-        <div class="servers">
-          <div class="server"><div class="dot plex">P</div><div><strong>Plex</strong><span>{{companion.plex}}</span></div></div>
-          <div class="server"><div class="dot jelly">J</div><div><strong>Jellyfin</strong><span>{{companion.jellyfin}}</span></div></div>
-          <div class="server"><div class="dot kodi">K</div><div><strong>Kodi</strong><span>{{companion.kodi}}</span></div></div>
-        </div>
       </div>
       <div class="reveal">
         <div class="device tv">
@@ -114,6 +112,14 @@
         </div>
         <p class="shot-caption">{{companion.caption}}</p>
       </div>
+    </div>
+    <div class="servers">
+      <div class="server"><div class="dot plex">P</div><div><strong>Plex</strong><span>{{companion.plex}}</span></div></div>
+      <div class="server"><div class="dot jelly">J</div><div><strong>Jellyfin</strong><span>{{companion.jellyfin}}</span></div></div>
+      <div class="server"><div class="dot emby">E</div><div><strong>Emby</strong><span>{{companion.emby}}</span></div></div>
+      <div class="server"><div class="dot kodi">K</div><div><strong>Kodi</strong><span>{{companion.kodi}}</span></div></div>
+      <div class="server"><div class="dot smb">S</div><div><strong>SMB</strong><span>{{companion.smb}}</span></div></div>
+      <div class="server"><div class="dot nfs">N</div><div><strong>NFS</strong><span>{{companion.nfs}}</span></div></div>
     </div>
   </div>
 </section>
@@ -163,11 +169,6 @@
           <li>{{direct.point3}}</li>
           <li>{{direct.point4}}</li>
         </ul>
-        <div class="flow">
-          <div class="node"><strong>{{direct.flow.source}}</strong><span>{{direct.flow.source_sub}}</span></div>
-          <div class="link">{{direct.flow.link}}<div class="bar"></div><span class="strike">{{direct.flow.strike}}</span></div>
-          <div class="node"><strong>{{direct.flow.device}}</strong><span>{{direct.flow.device_sub}}</span></div>
-        </div>
       </div>
       <div class="reveal">
         <div class="device tv">
@@ -182,6 +183,30 @@
         <p class="shot-caption">{{direct.caption}}</p>
       </div>
     </div>
+    <div class="matrix reveal">
+      <div class="matrix-head">
+        <h3>{{matrix.title}}</h3>
+        <p>{{matrix.lede}}</p>
+      </div>
+      <div class="matrix-scroll">
+        <table>
+          <thead><tr><td></td><th scope="col"><span class="dot plex">P</span>Plex</th><th scope="col"><span class="dot jelly">J</span>Jellyfin</th><th scope="col"><span class="dot emby">E</span>Emby</th><th scope="col"><span class="dot smb">S</span>SMB</th><th scope="col"><span class="dot nfs">N</span>NFS</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">{{matrix.row.original}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.artwork}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><sup aria-hidden="true">*</sup><span class="sr-only">{{matrix.yes_note}}</span></td><td><span class="yes" aria-hidden="true">✓</span><sup aria-hidden="true">*</sup><span class="sr-only">{{matrix.yes_note}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.intro}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.hdr}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.code}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.convert}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.remote}}</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.subs}}</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.collections}}</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          <tr><th scope="row">{{matrix.row.photos}}</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">{{matrix.no}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">{{matrix.yes}}</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="matrix-note">* {{matrix.note}}</p>
+    </div>
   </div>
 </section>
 
@@ -195,19 +220,19 @@
         <p class="lead">{{privacy.lede}}</p>
         <div class="pillars">
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg> {{privacy.local.title}}</strong>
-            <p>{{privacy.local.body}}</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg> {{privacy.account.title}}</strong>
+            <p>{{privacy.account.body}}</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> {{privacy.keychain.title}}</strong>
-            <p>{{privacy.keychain.body}}</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.4 5.6L5.6 18.4M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg> {{privacy.lookup.title}}</strong>
+            <p>{{privacy.lookup.body}}</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> {{privacy.pin.title}}</strong>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> {{privacy.pin.title}}</strong>
             <p>{{privacy.pin.body}}</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.4 5.6L5.6 18.4M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg> {{privacy.disconnect.title}}</strong>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> {{privacy.disconnect.title}}</strong>
             <p>{{privacy.disconnect.body}}</p>
           </div>
         </div>
@@ -218,9 +243,9 @@
           <img class="shot-img" src="/assets/img/screenshots/sources-setup.png" alt="">
           <div class="placeholder">
             <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
-            <div class="ph-title">Sources / Setup or Privacy options</div>
+            <div class="ph-title">Add Source with the phone QR code</div>
             <div class="ph-file">assets/img/screenshots/sources-setup.png</div>
-            <div class="ph-hint">Either the Add Source form with the PIN field, or Options → Privacy with the disconnect settings.</div>
+            <div class="ph-hint">The Add Source form showing its QR code and “Or scan to fill this in on your phone”, or Options → Privacy.</div>
           </div>
         </div>
         <p class="shot-caption">{{privacy.caption}}</p>
@@ -258,14 +283,14 @@
         <p>{{more.collections.body}}</p>
       </div>
       <div class="card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>{{more.slideshows.title}}</h3>
-        <p>{{more.slideshows.body}}</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg></div>
+        <h3>{{more.picture.title}}</h3>
+        <p>{{more.picture.body}}</p>
       </div>
       <div class="card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M7 9h2M11 9h6M7 13h10"/></svg></div>
-        <h3>{{more.localised.title}}</h3>
-        <p>{{more.localised.body}}</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2v2"/></svg></div>
+        <h3>{{more.phone.title}}</h3>
+        <p>{{more.phone.body}}</p>
       </div>
     </div>
   </div>
@@ -326,6 +351,18 @@
         </div>
         <p class="shot-caption">{{gallery.tv_docs}}</p>
       </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/sign-in-code.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2v2"/></svg>
+            <div class="ph-title">Apple TV — sign in with a code</div>
+            <div class="ph-file">assets/img/screenshots/sign-in-code.png</div>
+            <div class="ph-hint">The Plex or Jellyfin code screen: short code, QR code, “Waiting for approval…”.</div>
+          </div>
+        </div>
+        <p class="shot-caption">{{gallery.signin}}</p>
+      </div>
     </div>
   </div>
 </section>
@@ -344,6 +381,7 @@
       <a class="btn" href="/{{lang}}/support.html">{{download.cta_support}}</a>
     </div>
     <p class="note" style="margin-top:1rem;font-size:0.85rem;color:var(--faint)">{{download.coming_soon}}</p>
+    <p class="note" style="margin-top:0.4rem;font-size:0.85rem;color:var(--faint)">{{download.localised}}</p>
   </div>
 </section>
 

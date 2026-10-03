@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Sprocket Player</title>
-<meta name="description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<title>Politique de confidentialité — Sprocket Player</title>
+<meta name="description" content="Ce que Sprocket Player stocke, ce à quoi il se connecte et ce qu'il ne fait jamais. Pas de compte, pas de suivi, pas de cloud.">
 <meta name="theme-color" content="#07090d">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="ja" href="https://sprocketplayer.com/ja/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://sprocketplayer.com/privacy.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy Policy — Sprocket Player">
-<meta property="og:description" content="What data Sprocket Player handles, and what happens to it. Local-only by design.">
+<meta property="og:title" content="Politique de confidentialité — Sprocket Player">
+<meta property="og:description" content="Ce que Sprocket Player stocke, ce à quoi il se connecte et ce qu'il ne fait jamais. Pas de compte, pas de suivi, pas de cloud.">
 <meta property="og:image" content="https://sprocketplayer.com/assets/img/hero-plate.jpg">
 <meta property="og:url" content="https://sprocketplayer.com/fr/privacy.html">
 <meta property="og:locale" content="fr">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=b0d3a0cc">
 
 </head>
 <body>
@@ -37,15 +37,15 @@
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     <nav class="nav-links" id="nav-links">
       <a href="/fr/#formats">Formats</a>
-      <a href="/fr/#companion">Your library</a>
-      <a href="/fr/#intro">Skip Intro</a>
-      <a href="/fr/#direct">Direct play</a>
-      <a href="/fr/#privacy">Privacy</a>
-      <a href="/fr/support.html" data-page="support">Support</a>
+      <a href="/fr/#companion">Votre bibliothèque</a>
+      <a href="/fr/#intro">Passer l'intro</a>
+      <a href="/fr/#direct">Lecture</a>
+      <a href="/fr/#privacy">Confidentialité</a>
+      <a href="/fr/support.html" data-page="support">Assistance</a>
       <label class="lang-switch">
-        <span class="sr-only">Language</span>
+        <span class="sr-only">Langue</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
-        <select id="lang-select" aria-label="Language" data-page="privacy.html">
+        <select id="lang-select" aria-label="Langue" data-page="privacy.html">
 <option value="en">English</option>
 <option value="fr" selected>Français</option>
 <option value="de">Deutsch</option>
@@ -54,7 +54,7 @@
 <option value="ja">日本語</option>
         </select>
       </label>
-      <a class="btn sm primary" href="/fr/#download">Get the app</a>
+      <a class="btn sm primary" href="/fr/#download">Obtenir l'app</a>
     </nav>
   </div>
 </header>
@@ -63,56 +63,91 @@
 <main class="page">
   <div class="wrap">
     <div class="page-head">
-      <p class="eyebrow">Privacy</p>
-      <h1>Sprocket Player Privacy Policy</h1>
-      <p class="updated">Last updated: June 18, 2026</p>
+      <p class="eyebrow">Confidentialité</p>
+      <h1>Politique de confidentialité de Sprocket Player</h1>
+      <p class="updated">Dernière mise à jour : 3 octobre 2026</p>
     </div>
 
     <div class="prose">
-      <p>Sprocket Player is a media browser and player for iPad and Apple TV. This document describes what data the app handles and what happens to it.</p>
+      <p>Sprocket Player est un navigateur et lecteur multimédia pour Apple TV et iPad. Cette politique explique ce que l'app stocke, ce à quoi elle se connecte et ce qu'elle ne fait jamais.</p>
 
-      <h2>What Sprocket Player does with your data</h2>
-      <p><strong>Local-only by design.</strong> Sprocket Player connects to file shares on your local network (SMB, NFS) and reads from your device's photo library to display and play your photos and videos. The app does not have its own backend server, does not require an account, and does not transmit your media or browsing activity to us or to any third party.</p>
-      <p><strong>Source credentials.</strong> Usernames and passwords for SMB and NFS shares you configure are stored locally on your device in the iOS/tvOS Keychain. They never leave your device.</p>
-      <p><strong>Preferences and thumbnails.</strong> Your settings, source lists, watched-state, and generated thumbnails are stored locally on your device. When a source is marked as secured with a PIN, the associated thumbnails and preference records are encrypted at rest using AES-256-GCM via Apple's CryptoKit. The encryption keys are derived from the PIN and stored in the Keychain.</p>
-
-      <h2>Crash and performance data</h2>
-      <p>Sprocket Player uses <a href="https://sentry.io">Sentry</a> to capture crash reports and basic performance metrics. This data is sent to Sentry's servers, used only to identify and fix bugs, and is not linked to your identity or used for tracking.</p>
-      <p>The categories of data Sentry collects:</p>
+      <h2>En bref</h2>
       <ul>
-        <li><strong>Crash data:</strong> stack traces, device model, OS version, app version, and the state of the app at the moment of a crash</li>
-        <li><strong>Performance data:</strong> anonymous timing and resource-usage metrics</li>
+        <li>Il n'existe ni compte Sprocket ni serveur Sprocket. Nous ne recevons ni vos médias, ni votre bibliothèque, ni votre activité de visionnage.</li>
+        <li>L'app se connecte uniquement aux partages de fichiers et aux serveurs multimédias que vous ajoutez, ainsi qu'à votre compte Plex si vous utilisez Plex. La seule exception, les photos de la distribution, est décrite plus bas.</li>
+        <li>Il n'y a ni publicité, ni suivi, ni statistiques d'utilisation.</li>
+        <li>Les rapports de plantage sont désactivés par défaut et ne sont envoyés que si vous les activez.</li>
       </ul>
-      <p>No personally identifying information, no media files, no source credentials, and no contents of your photo library are ever sent to Sentry or anywhere else.</p>
 
-      <h2>Network access</h2>
-      <p>Sprocket Player uses your device's local network access to discover SMB shares via Bonjour and to connect to file shares you configure. iOS will prompt you to grant local network permission the first time the app needs it. The app does not connect to any servers on the public internet other than Sentry (for crash reporting, as described above).</p>
+      <h2>Ce qui est stocké sur votre appareil</h2>
+      <p>Tout ce que Sprocket Player mémorise est conservé sur l'appareil sur lequel vous l'utilisez :</p>
+      <ul>
+        <li><strong>Identifiants de connexion.</strong> Les mots de passe de vos partages de fichiers et les jetons de connexion à vos serveurs multimédias sont stockés dans le trousseau du système.</li>
+        <li><strong>Votre bibliothèque, telle que vous l'avez laissée.</strong> La liste des sources que vous avez ajoutées, vos réglages, ce que vous avez regardé et l'endroit où vous vous êtes arrêté.</li>
+        <li><strong>Miniatures et informations.</strong> Les miniatures, ainsi que les titres et résumés affichés dans la bibliothèque, sont enregistrés pour que l'app n'ait pas à les récupérer de nouveau.</li>
+      </ul>
+      <p>Les miniatures et les informations de bibliothèque enregistrées sont toujours chiffrées sur l'appareil, à l'aide d'une clé qui ne le quitte jamais. Si vous protégez une source par un code PIN, ce code devient une partie de la clé : ces éléments ne peuvent donc pas être lus sans lui.</p>
 
-      <h2>Children's privacy</h2>
-      <p>Sprocket Player is not directed at children under 13 and does not knowingly collect any personal information from children.</p>
+      <h2>Ce à quoi l'app se connecte</h2>
+      <p>Sprocket Player se connecte aux emplacements que vous lui indiquez. La seule exception concerne les photos de la distribution, décrites plus bas.</p>
+
+      <h3>Votre réseau local</h3>
+      <p>Avec votre autorisation, l'app recherche sur votre réseau local les partages de fichiers (SMB, NFS) et les serveurs multimédias (Plex, Jellyfin, Emby) afin de vous les proposer, et se connecte à ceux que vous ajoutez. Votre appareil vous demandera d'autoriser l'accès au réseau local la première fois que ce sera nécessaire.</p>
+
+      <h3>Vos serveurs multimédias</h3>
+      <p>Lorsque vous ajoutez un serveur Plex, Jellyfin ou Emby, l'app s'y connecte et lui demande votre bibliothèque, les illustrations et la vidéo. En plus de vos identifiants de connexion, le serveur reçoit le nom et la version de l'app, un libellé d'appareil et un identifiant aléatoire créé pour cette installation, afin de pouvoir faire figurer Sprocket Player parmi vos appareils autorisés. Cet identifiant n'est partagé avec personne d'autre.</p>
+      <p>Votre serveur tient ses propres registres de ce qui lui est demandé, selon ses propres réglages et ses propres conditions de confidentialité. Sprocket Player tient son propre registre de ce que vous avez regardé, sur votre appareil, et ne lit ni ne modifie le statut de visionnage sur votre serveur. Si vous vous connectez à un serveur situé en dehors de votre réseau domestique, cette connexion transite par Internet jusqu'à ce serveur.</p>
+
+      <h3>Votre compte Plex</h3>
+      <p>La connexion à Plex est gérée par le service de Plex lui-même, sur plex.tv, et non par votre serveur. Si vous utilisez Plex, l'app contacte plex.tv lorsque vous vous connectez avec un code, lorsque vous choisissez lesquels de vos serveurs ajouter, et à chaque fois qu'elle se connecte à un serveur ajouté de cette façon, afin d'obtenir l'adresse actuelle du serveur.</p>
+      <p>Ce que Plex fait de ces requêtes est décrit dans <a href="https://www.plex.tv/about/privacy-legal/">la politique de confidentialité de Plex</a>. La connexion à Jellyfin et à Emby se fait directement auprès de votre propre serveur et ne fait intervenir aucun service extérieur. Si vous n'utilisez pas Plex, l'app ne contacte jamais plex.tv.</p>
+
+      <h3>Configuration depuis votre téléphone</h3>
+      <p>Sur Apple TV, vous pouvez scanner un code QR pour remplir un formulaire de connexion sur votre téléphone. Tant que ce formulaire est ouvert, l'Apple TV sert une page unique sur votre réseau local. Ce que vous saisissez est chiffré dans le navigateur de votre téléphone avec une clé contenue dans le code QR, et n'est envoyé qu'à votre Apple TV. La page cesse d'être disponible dès que le formulaire se ferme. Rien n'est envoyé en dehors de votre réseau.</p>
+
+      <h3>Photos de la distribution</h3>
+      <p>Les fichiers de bibliothèque créés par des outils tels que Kodi peuvent contenir des adresses web de photos des acteurs. Lorsque vous ouvrez la distribution d'un film ou d'une série sur un partage de fichiers, l'app télécharge ces photos depuis les adresses figurant dans vos fichiers. Le site qui les héberge reçoit l'adresse internet de votre appareil et les photos demandées. Les photos sont conservées uniquement en mémoire et ne sont jamais enregistrées sur votre appareil. Si vos fichiers ne contiennent aucune adresse de ce type, aucune requête n'est effectuée.</p>
+
+      <h3>Ce que l'app ne fait pas</h3>
+      <p>Sprocket Player n'envoie le contenu de votre bibliothèque à aucun service en ligne pour identifier vos médias ou rechercher des informations à leur sujet. Les affiches et résumés proviennent de votre propre serveur ou de fichiers enregistrés à côté de vos médias. Des fonctions telles que la détection de l'intro et la génération des miniatures s'exécutent entièrement sur votre appareil.</p>
+
+      <h2>Votre photothèque</h2>
+      <p>Si vous l'y autorisez, Sprocket Player lit la photothèque de votre appareil pour afficher vos photos et vidéos. Elles sont affichées sur l'appareil et ne sont ni copiées ni envoyées où que ce soit.</p>
+
+      <h2>Rapports de plantage</h2>
+      <p>Les rapports de plantage sont désactivés par défaut. Rien n'est collecté tant que vous n'activez pas « Partager les rapports de plantage » dans Options, et vous pouvez désactiver ce réglage à tout moment.</p>
+      <p>Si vous l'activez, les rapports de plantage et de blocage sont envoyés à <a href="https://sentry.io">Sentry</a>, un service de rapports de plantage, et stockés dans l'Union européenne. Ils servent uniquement à trouver et à corriger les bugs. Un rapport contient :</p>
+      <ul>
+        <li>des détails techniques sur la défaillance, tels que les traces de pile et l'état de l'app à cet instant</li>
+        <li>le modèle de l'appareil, la version du système d'exploitation et la version de l'app</li>
+      </ul>
+      <p>Les rapports ne sont pas liés à votre identité et ne servent pas au suivi. Ils ne contiennent ni captures d'écran, ni fichiers multimédias, ni identifiants de connexion, ni aucun élément de votre photothèque. L'app n'enregistre ni sessions d'utilisation ni traces de performance.</p>
+
+      <h2>Confidentialité des enfants</h2>
+      <p>Sprocket Player ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment d'informations personnelles auprès d'enfants.</p>
 
       <h2>Contact</h2>
-      <p>If you have questions about this policy, email <a href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>.</p>
+      <p>Pour toute question concernant cette politique, écrivez à <a class="email" data-u="support" data-d="sprocketplayer.com" href="/fr/support.html#contact">support [at] sprocketplayer.com</a>.</p>
 
-      <h2>Changes to this policy</h2>
-      <p>Updates to this policy will be posted at this URL with a revised "Last updated" date.</p>
+      <h2>Modifications de cette politique</h2>
+      <p>Les mises à jour de cette politique seront publiées à cette adresse, avec une date « Dernière mise à jour » révisée.</p>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin and Kodi are trademarks of their respective owners.</div>
+    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad et Siri sont des marques d'Apple Inc. Plex, Jellyfin, Emby et Kodi sont des marques de leurs propriétaires respectifs.</div>
     <nav>
-      <a href="/fr/">Home</a>
-      <a href="/fr/support.html">Support</a>
-      <a href="/fr/privacy.html">Privacy</a>
-      <a href="mailto:support@sprocketplayer.com">Contact</a>
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/support.html">Assistance</a>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/support.html#contact">Contact</a>
     </nav>
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
+<script src="/assets/js/site.js?v=b0d3a0cc"></script>
 
 </body>
 </html>

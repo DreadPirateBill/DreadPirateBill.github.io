@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:build.py">
+   </FileRef>
+   <FileRef
+      location = "group:templates">
+   </FileRef>
+   <FileRef
+      location = "group:i18n">
+   </FileRef>
+   <FileRef
+      location = "group:assets">
+   </FileRef>
+   <FileRef
+      location = "group:en">
+   </FileRef>
+   <FileRef
+      location = "group:fr">
+   </FileRef>
+   <FileRef
+      location = "group:de">
+   </FileRef>
+   <FileRef
+      location = "group:es">
+   </FileRef>
+   <FileRef
+      location = "group:it">
+   </FileRef>
+   <FileRef
+      location = "group:ja">
+   </FileRef>
+   <FileRef
+      location = "group:index.html">
+   </FileRef>
+   <FileRef
+      location = "group:support.html">
+   </FileRef>
+   <FileRef
+      location = "group:privacy.html">
+   </FileRef>
+   <FileRef
+      location = "group:CNAME">
+   </FileRef>
+</Workspace>

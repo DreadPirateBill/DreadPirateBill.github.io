@@ -44,6 +44,14 @@
     });
   }
 
+  // Contact address: assembled here so it never appears whole in the page source, where address harvesters look. Without JavaScript the link keeps its
+  // readable "support [at] …" text and leads to the support page.
+  document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
+    var address = el.getAttribute('data-u') + '@' + el.getAttribute('data-d');
+    el.textContent = address;
+    el.setAttribute('href', 'mailto:' + address);
+  });
+
   // Footer year
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();

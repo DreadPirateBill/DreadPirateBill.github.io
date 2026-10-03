@@ -18,28 +18,63 @@
     <div class="prose">
       <p>{{policy.intro}}</p>
 
-      <h2>{{policy.data.title}}</h2>
-      <p><strong>{{policy.data.local_lead}}</strong> {{policy.data.local}}</p>
-      <p><strong>{{policy.data.creds_lead}}</strong> {{policy.data.creds}}</p>
-      <p><strong>{{policy.data.prefs_lead}}</strong> {{policy.data.prefs}}</p>
+      <h2>{{policy.short.title}}</h2>
+      <ul>
+        <li>{{policy.short.li1}}</li>
+        <li>{{policy.short.li2}}</li>
+        <li>{{policy.short.li3}}</li>
+        <li>{{policy.short.li4}}</li>
+      </ul>
+
+      <h2>{{policy.device.title}}</h2>
+      <p>{{policy.device.p1}}</p>
+      <ul>
+        <li><strong>{{policy.device.li1_lead}}</strong> {{policy.device.li1}}</li>
+        <li><strong>{{policy.device.li2_lead}}</strong> {{policy.device.li2}}</li>
+        <li><strong>{{policy.device.li3_lead}}</strong> {{policy.device.li3}}</li>
+      </ul>
+      <p>{{policy.device.p2}}</p>
+
+      <h2>{{policy.connect.title}}</h2>
+      <p>{{policy.connect.p1}}</p>
+
+      <h3>{{policy.connect.shares.title}}</h3>
+      <p>{{policy.connect.shares.body}}</p>
+
+      <h3>{{policy.connect.servers.title}}</h3>
+      <p>{{policy.connect.servers.p1}}</p>
+      <p>{{policy.connect.servers.p2}}</p>
+
+      <h3>{{policy.connect.plex.title}}</h3>
+      <p>{{policy.connect.plex.p1}}</p>
+      <p>{{policy.connect.plex.p2_before}} <a href="https://www.plex.tv/about/privacy-legal/">{{policy.connect.plex.p2_link}}</a>{{policy.connect.plex.p2_after}}</p>
+
+      <h3>{{policy.connect.phone.title}}</h3>
+      <p>{{policy.connect.phone.body}}</p>
+
+      <h3>{{policy.connect.cast.title}}</h3>
+      <p>{{policy.connect.cast.body}}</p>
+
+      <h3>{{policy.connect.nothing.title}}</h3>
+      <p>{{policy.connect.nothing.body}}</p>
+
+      <h2>{{policy.photos.title}}</h2>
+      <p>{{policy.photos.body}}</p>
 
       <h2>{{policy.crash.title}}</h2>
-      <p>{{policy.crash.p1_before}} <a href="https://sentry.io">Sentry</a> {{policy.crash.p1_after}}</p>
-      <p>{{policy.crash.p2}}</p>
+      <p>{{policy.crash.p1}}</p>
+      <p>{{policy.crash.p2_before}} <a href="https://sentry.io">Sentry</a>{{policy.crash.p2_after}}</p>
       <ul>
-        <li><strong>{{policy.crash.li1_lead}}</strong> {{policy.crash.li1}}</li>
-        <li><strong>{{policy.crash.li2_lead}}</strong> {{policy.crash.li2}}</li>
+        <li>{{policy.crash.li1}}</li>
+        <li>{{policy.crash.li2}}</li>
       </ul>
       <p>{{policy.crash.p3}}</p>
-
-      <h2>{{policy.network.title}}</h2>
-      <p>{{policy.network.body}}</p>
 
       <h2>{{policy.children.title}}</h2>
       <p>{{policy.children.body}}</p>
 
       <h2>{{policy.contact.title}}</h2>
-      <p>{{policy.contact.body}} <a href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>.</p>
+      <p>{{policy.contact.body}} <a class="email" data-u="support" data-d="sprocketplayer.com" href="/{{lang}}/support.html#contact">support [at] sprocketplayer.com</a>{{punct.period}}</p>
 
       <h2>{{policy.changes.title}}</h2>
       <p>{{policy.changes.body}}</p>

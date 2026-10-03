@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=b0d3a0cc">
 
 </head>
 <body>
@@ -39,7 +39,7 @@
       <a href="/en/#formats">Formats</a>
       <a href="/en/#companion">Your library</a>
       <a href="/en/#intro">Skip Intro</a>
-      <a href="/en/#direct">Direct play</a>
+      <a href="/en/#direct">Playback</a>
       <a href="/en/#privacy">Privacy</a>
       <a href="/en/support.html" data-page="support">Support</a>
       <label class="lang-switch">
@@ -86,11 +86,11 @@
         <p>Playback, metadata, intro detection, privacy settings and troubleshooting connections.</p>
         <a class="btn sm" href="#faq">Browse the FAQ</a>
       </div>
-      <div class="support-card">
+      <div class="support-card" id="contact">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
         <h2>Contact</h2>
         <p>Still stuck, or found a bug? Email and you'll hear back from the person who wrote the app.</p>
-        <a class="btn sm primary" href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>
+        <a class="btn sm primary email" data-u="support" data-d="sprocketplayer.com" href="#contact">support [at] sprocketplayer.com</a>
       </div>
     </div>
 
@@ -105,16 +105,24 @@
           <p>Apple TV running tvOS 18.6 or later, and iPad running iPadOS 17.6 or later. It is not available for iPhone.</p>
         </details>
         <details>
-          <summary>Does Sprocket Player need Plex, Jellyfin or Kodi installed?</summary>
-          <p>No. It reads media straight from an SMB or NFS share. If you already use one of those servers, point Sprocket Player at the same folders and it will pick up your artwork and metadata.</p>
+          <summary>Does Sprocket Player need Plex, Jellyfin or Emby installed?</summary>
+          <p>No. A shared folder on your NAS or computer works on its own, and Sprocket shows any posters and descriptions saved alongside your files. If you already run Plex, Jellyfin or Emby, sign in and Sprocket uses the server's library and artwork directly.</p>
         </details>
         <details>
-          <summary>Why do I get an “SMB2 or higher required” error from a Windows PC?</summary>
-          <p>Sprocket Player uses SMB2 and above. Windows 10 and later have SMB1 disabled, but some older shares still advertise only SMB1. Enable SMB2 in Windows Features and try again.</p>
+          <summary>Sprocket can't connect to a share on my Windows PC. What should I check?</summary>
+          <p>Sprocket Player needs SMB version 2 or later. If SMB2 has been turned off on the PC, turn it back on in Windows and try again. Also check that file sharing is enabled and that the user name and password are correct.</p>
+        </details>
+        <details>
+          <summary>How do I sign in to Plex or Jellyfin on Apple TV?</summary>
+          <p>Choose Authenticate on the Add Source form. The TV shows a short code and a QR code. Approve the code at plex.tv/link or in any signed-in Jellyfin client, and the TV finishes on its own. If a Jellyfin administrator has switched Quick Connect off, choose Use a Password Instead. Emby uses the phone setup form.</p>
+        </details>
+        <details>
+          <summary>Why did a video play as a converted stream?</summary>
+          <p>On a media server, Sprocket plays the original file whenever it can. It asks the server to convert only when this device can't decode the codec, the connection is too slow for the file, or the server is outside your network. A notice says which.</p>
         </details>
         <details>
           <summary>Where is my data stored?</summary>
-          <p>Entirely on the device. Credentials live in the system Keychain and thumbnails are encrypted on disk. See the <a href="/en/privacy.html">privacy policy</a> for the full picture.</p>
+          <p>Entirely on the device. Sign-in details live in the system Keychain, and saved thumbnails and library details are always encrypted. See the <a href="/en/privacy.html">privacy policy</a> for the full picture.</p>
         </details>
       </div>
 
@@ -126,17 +134,17 @@
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin and Kodi are trademarks of their respective owners.</div>
+    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin, Emby and Kodi are trademarks of their respective owners.</div>
     <nav>
       <a href="/en/">Home</a>
       <a href="/en/support.html">Support</a>
       <a href="/en/privacy.html">Privacy</a>
-      <a href="mailto:support@sprocketplayer.com">Contact</a>
+      <a href="/en/support.html#contact">Contact</a>
     </nav>
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
+<script src="/assets/js/site.js?v=b0d3a0cc"></script>
 
 </body>
 </html>

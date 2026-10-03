@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sprocket Player — Your media, your way. On Apple TV and iPad.</title>
-<meta name="description" content="Sprocket Player is a network media browser and player for Apple TV and iPad. Plays the movies, shows, photos and documents you already own straight from your NAS. No server, no account, no transcoding, no cloud.">
+<meta name="description" content="Sprocket Player is a media browser and player for Apple TV and iPad. Plays the movies, shows, photos and documents you already own from your Plex, Jellyfin or Emby server or straight from your NAS. Direct play first, HDR on Apple TV, no subscription, no cloud library.">
 <meta name="theme-color" content="#07090d">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="x-default" href="https://sprocketplayer.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sprocket Player — Your media, your way. On Apple TV and iPad.">
-<meta property="og:description" content="Sprocket Player is a network media browser and player for Apple TV and iPad. Plays the movies, shows, photos and documents you already own straight from your NAS. No server, no account, no transcoding, no cloud.">
+<meta property="og:description" content="Sprocket Player is a media browser and player for Apple TV and iPad. Plays the movies, shows, photos and documents you already own from your Plex, Jellyfin or Emby server or straight from your NAS. Direct play first, HDR on Apple TV, no subscription, no cloud library.">
 <meta property="og:image" content="https://sprocketplayer.com/assets/img/hero-plate.jpg">
 <meta property="og:url" content="https://sprocketplayer.com/en/">
 <meta property="og:locale" content="en">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=b0d3a0cc">
 
 </head>
 <body>
@@ -39,7 +39,7 @@
       <a href="/en/#formats">Formats</a>
       <a href="/en/#companion">Your library</a>
       <a href="/en/#intro">Skip Intro</a>
-      <a href="/en/#direct">Direct play</a>
+      <a href="/en/#direct">Playback</a>
       <a href="/en/#privacy">Privacy</a>
       <a href="/en/support.html" data-page="support">Support</a>
       <label class="lang-switch">
@@ -69,7 +69,7 @@
     <div class="hero-inner">
       <p class="eyebrow">For Apple TV and iPad</p>
       <h1>Your media.<br><span class="grad">Your way.</span></h1>
-      <p class="lede">Sprocket Player plays the movies, shows, photos and documents you already own, straight from the shares on your home network. No server to install. No account to create. Nothing leaves your house.</p>
+      <p class="lede">Sprocket Player plays the movies, shows, photos and documents you already own, from your Plex, Jellyfin or Emby server or straight from the shares on your home network. No subscription. No cloud library. Your media stays yours.</p>
       <div class="cta">
         <a class="btn primary" href="#download">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.28-1.61 2.8-.41 6.93 1.16 9.2.77 1.11 1.68 2.36 2.87 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.25-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
@@ -99,23 +99,26 @@
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Plays what you have. <span class="grad">Not just what's convenient.</span></h2>
-      <p>Sprocket Player is built on the VLC engine, so the MKVs, remuxes, and odd containers that trip up other players just work. Videos, photos and documents all live in one browser.</p>
+      <p>Two video engines, VLC and MPV, give you the final say over picture quality, from HDR output on Apple TV to fine-grained picture tuning, and between them they play the MKVs, remuxes and odd containers that trip up other players. One app, all your media.</p>
     </div>
 
     <div class="format-grid">
       <div class="format-card reveal">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="1.8" aria-hidden="true"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#29c6ff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="url(#g1)" stroke="none"/></svg> Video</h3>
-        <p>Full-bitrate playback with multiple audio tracks, embedded and sidecar subtitles, and chapters.</p>
+        <p>Full-bitrate playback with multiple audio tracks, chapters, and embedded and external subtitle support.</p>
         <div class="chips">
           <span class="chip hi">MKV</span><span class="chip hi">MP4</span><span class="chip hi">M4V</span><span class="chip hi">MOV</span>
           <span class="chip">AVI</span><span class="chip">M2TS</span><span class="chip">TS</span><span class="chip">MTS</span>
           <span class="chip">WebM</span><span class="chip">WMV</span><span class="chip">MPG</span><span class="chip">FLV</span>
-          <span class="chip">OGM</span><span class="chip">ISO</span><span class="chip">3GP</span>
+          <span class="chip">OGM</span><span class="chip">3GP</span>
+        </div>
+        <div class="chips" style="margin-top:0.6rem">
+          <span class="chip warm">External subtitles</span><span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span>
         </div>
       </div>
       <div class="format-card reveal">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="url(#g2)" stroke-width="1.8" aria-hidden="true"><defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#29c6ff"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg> Photos</h3>
-        <p>Browse network photo folders or your iCloud Photos library. Slideshows with a timer, and any photo can become your wallpaper.</p>
+        <p>Browse your photos from a network folder or your iCloud Photos library, or sit back and enjoy them as a slideshow. Any photo can become your wallpaper.</p>
         <div class="chips">
           <span class="chip warm">JPEG</span><span class="chip warm">HEIC</span><span class="chip warm">PNG</span>
           <span class="chip">GIF</span><span class="chip">BMP</span><span class="chip">HEIF</span><span class="chip">iCloud Photos</span>
@@ -130,7 +133,7 @@
       </div>
     </div>
 
-    <p class="shot-caption reveal" style="margin-top:1.5rem">Sources: SMB and NFS network shares, plus the on-device Photos library. Shares are discovered automatically with Bonjour.</p>
+    <p class="shot-caption reveal" style="margin-top:1.5rem">Sources: Plex, Jellyfin and Emby servers, SMB and NFS network shares, plus the on-device Photos library. Shares and servers on your network are discovered automatically.</p>
   </div>
 </section>
 
@@ -140,20 +143,15 @@
     <div class="feature">
       <div class="feature-copy reveal">
         <p class="eyebrow">Bring your own library</p>
-        <h2>The perfect companion to <span class="grad">Plex, Jellyfin and Kodi.</span></h2>
-        <p class="lead">You've already organised your library and scraped the artwork. Sprocket Player reads the same folders those servers use, so you get posters, fanart, episode titles and plot summaries without running anything extra.</p>
+        <h2>The perfect companion to <span class="grad">Plex, Jellyfin, Emby and Kodi libraries.</span></h2>
+        <p class="lead">Your library, anywhere you want it to be. Whether you run a popular media server or prefer a network file share, Sprocket lets you enjoy your library with no compromises.</p>
         <ul>
-          <li>Understands standard Movies / TV Shows / Season folder layouts.</li>
-          <li>Reads Kodi-style NFO metadata and local artwork out of the box.</li>
-          <li>Optional Collections group a whole franchise into one folder.</li>
-          <li>Watched state and resume points live on the device. Hide what you've seen with one toggle.</li>
-          <li>Play trailers straight from the library.</li>
+          <li>Sign in to Plex, Jellyfin or Emby and your movies and shows are there, with the posters, descriptions and episode details you already know.</li>
+          <li>No media server? Point Sprocket at a shared folder on your NAS or computer. Posters and descriptions saved alongside your files by Kodi and similar library tools show up automatically.</li>
+          <li>Videos play in their original quality. If you use a media server, it can step in and convert a file that otherwise wouldn't play, and Sprocket tells you when that happens.</li>
+          <li>Pick up where you left off. Sprocket remembers what you've watched and can hide it with one toggle.</li>
+          <li>Keep a film series together. On a shared folder, Collections gather every movie in a franchise into one place.</li>
         </ul>
-        <div class="servers">
-          <div class="server"><div class="dot plex">P</div><div><strong>Plex</strong><span>Same media folders, no transcoder.</span></div></div>
-          <div class="server"><div class="dot jelly">J</div><div><strong>Jellyfin</strong><span>Point at the library share and go.</span></div></div>
-          <div class="server"><div class="dot kodi">K</div><div><strong>Kodi</strong><span>NFO files and artwork, fully supported.</span></div></div>
-        </div>
       </div>
       <div class="reveal">
         <div class="device tv">
@@ -165,8 +163,16 @@
             <div class="ph-hint">A show or season view with fanart, episode thumbnails and summaries visible.</div>
           </div>
         </div>
-        <p class="shot-caption">Kodi-scraped metadata, rendered on the big screen.</p>
+        <p class="shot-caption">Your library, on the big screen.</p>
       </div>
+    </div>
+    <div class="servers">
+      <div class="server"><div class="dot plex">P</div><div><strong>Plex</strong><span>Sign in with a short code.</span></div></div>
+      <div class="server"><div class="dot jelly">J</div><div><strong>Jellyfin</strong><span>Sign in with Quick Connect.</span></div></div>
+      <div class="server"><div class="dot emby">E</div><div><strong>Emby</strong><span>Add it from your phone.</span></div></div>
+      <div class="server"><div class="dot kodi">K</div><div><strong>Kodi</strong><span>Uses the artwork Kodi saved.</span></div></div>
+      <div class="server"><div class="dot smb">S</div><div><strong>SMB</strong><span>Shared folders on a NAS, PC or Mac.</span></div></div>
+      <div class="server"><div class="dot nfs">N</div><div><strong>NFS</strong><span>Shared folders on Linux or a NAS.</span></div></div>
     </div>
   </div>
 </section>
@@ -178,12 +184,12 @@
       <div class="feature-copy reveal">
         <p class="eyebrow">Intro detection</p>
         <h2>Skip the intro. <span class="grad">Every episode.</span></h2>
-        <p class="lead">Turn on Intro Detection and Sprocket Player listens to a season in the background, fingerprints the title sequence, and finds it in every episode. When you hit it, a Skip Intro button is waiting.</p>
+        <p class="lead">Turn on Intro Detection and Sprocket finds the opening titles in your shows for you. When they start, a Skip Intro button appears. One press and you're into the episode.</p>
         <ul>
-          <li>Works on your own files, with no online database and no server plugin.</li>
-          <li>Analysis runs entirely on your Apple TV or iPad, while you browse.</li>
-          <li>New episodes are picked up automatically the next time you visit the season.</li>
-          <li>Off by default. Enable it in Options when you're ready.</li>
+          <li>Works with the shows you already have. Nothing to download, and nothing to install on your server.</li>
+          <li>Private by design. It all happens on your Apple TV or iPad.</li>
+          <li>New episodes are covered automatically as you add them.</li>
+          <li>Off until you want it. Switch it on in Options.</li>
         </ul>
       </div>
       <div class="reveal">
@@ -196,7 +202,7 @@
             <div class="ph-hint">Mid-title-sequence with the Skip Intro button on screen. Transport controls hidden if possible.</div>
           </div>
         </div>
-        <p class="shot-caption">Detected on device. No lookup, no upload.</p>
+        <p class="shot-caption">Straight to the story.</p>
       </div>
     </div>
   </div>
@@ -207,20 +213,15 @@
   <div class="wrap">
     <div class="feature">
       <div class="feature-copy reveal">
-        <p class="eyebrow">On device. No transcoding.</p>
+        <p class="eyebrow">Play it your way</p>
         <h2>The file you have is <span class="grad">the file you watch.</span></h2>
-        <p class="lead">Media servers re-encode video on the fly when a client can't handle it, burning CPU and softening the picture. Sprocket Player decodes on the device itself, so every stream is the original bitstream at full quality, straight off your NAS.</p>
+        <p class="lead">Sprocket plays your videos in their original quality, from wherever they live. Use what you already have and it just works. And when a video needs a hand, a media server can convert it for you.</p>
         <ul>
-          <li>No server-side transcoder, no hardware-acceleration licence, no waiting for a session to spin up.</li>
-          <li>Your NAS only has to serve files. A basic share on any box is enough.</li>
-          <li>Switch audio tracks and subtitles instantly, with no re-encode.</li>
-          <li>Thumbnails are generated by the device too, and cached for next time.</li>
+          <li>Simplest: use what you have. A media server or a shared folder, Sprocket is at home with either.</li>
+          <li>Fastest: a shared folder with your library already organised. Nothing sits between Sprocket and your files, so browsing and playback are at their quickest.</li>
+          <li>Older Apple TV, or watching away from home? A media server can convert video to suit the device and the connection.</li>
+          <li>Two video engines, VLC and MPV. Choose the one that looks best on your setup, with HDR on Apple TV 4K.</li>
         </ul>
-        <div class="flow">
-          <div class="node"><strong>Your NAS or PC</strong><span>SMB or NFS share</span></div>
-          <div class="link">Direct play<div class="bar"></div><span class="strike">transcoding server</span></div>
-          <div class="node"><strong>Apple TV or iPad</strong><span>Decodes on device</span></div>
-        </div>
       </div>
       <div class="reveal">
         <div class="device tv">
@@ -235,6 +236,30 @@
         <p class="shot-caption">Multiple audio tracks and subtitles, a swipe away.</p>
       </div>
     </div>
+    <div class="matrix reveal">
+      <div class="matrix-head">
+        <h3>What works where</h3>
+        <p>Nearly everything works everywhere. Where it doesn't, here is the whole picture.</p>
+      </div>
+      <div class="matrix-scroll">
+        <table>
+          <thead><tr><td></td><th scope="col"><span class="dot plex">P</span>Plex</th><th scope="col"><span class="dot jelly">J</span>Jellyfin</th><th scope="col"><span class="dot emby">E</span>Emby</th><th scope="col"><span class="dot smb">S</span>SMB</th><th scope="col"><span class="dot nfs">N</span>NFS</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Original-quality playback</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          <tr><th scope="row">Posters, descriptions and episode details</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><sup aria-hidden="true">*</sup><span class="sr-only">Yes, when saved alongside your files</span></td><td><span class="yes" aria-hidden="true">✓</span><sup aria-hidden="true">*</sup><span class="sr-only">Yes, when saved alongside your files</span></td></tr>
+          <tr><th scope="row">Skip Intro</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          <tr><th scope="row">HDR on Apple TV 4K</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          <tr><th scope="row">Sign in with a code, no password</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td></tr>
+          <tr><th scope="row">Converts video for older Apple TVs</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td></tr>
+          <tr><th scope="row">Watch away from home</th><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td></tr>
+          <tr><th scope="row">Separate subtitle files</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          <tr><th scope="row">Collections for film series</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          <tr><th scope="row">Photos, comics and documents</th><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr-only">No</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td><td><span class="yes" aria-hidden="true">✓</span><span class="sr-only">Yes</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="matrix-note">* When posters and descriptions are saved alongside your files.</p>
+    </div>
   </div>
 </section>
 
@@ -245,38 +270,38 @@
       <div class="feature-copy reveal">
         <p class="eyebrow">Privacy first</p>
         <h2>Your library is <span class="grad">nobody's business.</span></h2>
-        <p class="lead">Sprocket Player has no backend, no account, and no cloud. It talks to your shares and nothing else. Privacy isn't a setting we added later. It's how the app is built.</p>
+        <p class="lead">No account to create. No tracking. Nobody looking over your shoulder. Sprocket connects to your media, and that is where it stops.</p>
         <div class="pillars">
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg> Local only</strong>
-            <p>No server component and no account. Your media and browsing history never leave your network.</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg> Your library, your business</strong>
+            <p>There is no Sprocket account to sign up for and no Sprocket cloud. Your library goes from your home to your screen, with nobody in between.</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> Keychain credentials</strong>
-            <p>Share usernames and passwords are stored in the system Keychain on the device, and nowhere else.</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.4 5.6L5.6 18.4M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg> Nothing looked up online</strong>
+            <p>Posters and details come from your own server or your own files. Sprocket doesn't go out to the internet to work out what's in your collection.</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> PIN-secured sources</strong>
-            <p>Lock a source behind a PIN. Its thumbnails and history are encrypted at rest with AES-256, keyed from that PIN.</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> Encrypted, always</strong>
+            <p>Thumbnails and details Sprocket keeps on your device are always encrypted. Add a PIN to anything you'd rather keep to yourself and it's locked tighter still.</p>
           </div>
           <div class="pillar">
-            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.4 5.6L5.6 18.4M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg> Auto-disconnect</strong>
-            <p>Choose to drop share connections when you leave the app or go idle, so a shared living-room TV stays a shared TV.</p>
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> Walks away when you do</strong>
+            <p>Sprocket can disconnect when you leave the app or go idle, so a shared living-room TV stays a shared TV.</p>
           </div>
         </div>
-        <p class="note" style="margin-top:1.25rem;color:var(--faint);font-size:0.88rem">The only outbound connection is anonymous crash reporting, which can be turned off in Options. <a href="/en/privacy.html" style="color:var(--cyan)">Read the full privacy policy.</a></p>
+        <p class="note" style="margin-top:1.25rem;color:var(--faint);font-size:0.88rem">Sprocket only talks to the places you point it at. If you use Plex, that includes your Plex account, which signs you in and helps Sprocket find your server. Cast photos are the one exception: they load from the web addresses saved in your library's files. Passwords and sign-ins are kept in your device's secure Keychain. Crash reports are off unless you turn them on. <a href="/en/privacy.html" style="color:var(--cyan)">Read the full privacy policy.</a></p>
       </div>
       <div class="reveal">
         <div class="device tv">
           <img class="shot-img" src="/assets/img/screenshots/sources-setup.png" alt="">
           <div class="placeholder">
             <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
-            <div class="ph-title">Sources / Setup or Privacy options</div>
+            <div class="ph-title">Add Source with the phone QR code</div>
             <div class="ph-file">assets/img/screenshots/sources-setup.png</div>
-            <div class="ph-hint">Either the Add Source form with the PIN field, or Options → Privacy with the disconnect settings.</div>
+            <div class="ph-hint">The Add Source form showing its QR code and “Or scan to fill this in on your phone”, or Options → Privacy.</div>
           </div>
         </div>
-        <p class="shot-caption">Everything stays on the device, encrypted.</p>
+        <p class="shot-caption">Your sign-in details never leave the device.</p>
       </div>
     </div>
   </div>
@@ -308,17 +333,17 @@
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#29c6ff" stroke-width="1.8" aria-hidden="true"><path d="M3 7h5l2 2h11v10H3z"/><path d="M3 7V5h7"/></svg></div>
         <h3>Collections</h3>
-        <p>Group every film in a franchise into one folder, even the later ones that stopped following the naming pattern.</p>
+        <p>Group every film in a franchise on a file share into one folder, even the later ones that stopped following the naming pattern.</p>
       </div>
       <div class="card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Slideshows</h3>
-        <p>Turn any folder of photos into a timed slideshow, with a progress ring so you always know where you are.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a3d" stroke-width="1.8" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg></div>
+        <h3>Picture controls</h3>
+        <p>Aspect, deinterlace, speed, brightness and colour, plus upscaling, debanding and tone mapping on the MPV engine. Adjust live while the picture plays, per file if you like.</p>
       </div>
       <div class="card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M7 9h2M11 9h6M7 13h10"/></svg></div>
-        <h3>Localised</h3>
-        <p>Available in English, French, German, Italian, Spanish and Japanese.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2v2"/></svg></div>
+        <h3>Set up from your phone</h3>
+        <p>Scan the QR code on your Apple TV and fill in the address, name and PIN on your phone's keyboard. Sign in to Plex or Jellyfin with a short code, never a password on the remote.</p>
       </div>
     </div>
   </div>
@@ -379,6 +404,18 @@
         </div>
         <p class="shot-caption">Comics and PDFs, page by page.</p>
       </div>
+      <div class="reveal">
+        <div class="device tv">
+          <img class="shot-img" src="/assets/img/screenshots/sign-in-code.png" alt="">
+          <div class="placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2v2"/></svg>
+            <div class="ph-title">Apple TV — sign in with a code</div>
+            <div class="ph-file">assets/img/screenshots/sign-in-code.png</div>
+            <div class="ph-hint">The Plex or Jellyfin code screen: short code, QR code, “Waiting for approval…”.</div>
+          </div>
+        </div>
+        <p class="shot-caption">Sign in with a code. Nothing typed on the remote.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -388,7 +425,7 @@
   <div class="wrap reveal">
     <img src="/assets/img/icon.png" alt="Sprocket Player" width="96" height="96">
     <h2>Your media. <span class="grad">Your way.</span></h2>
-    <p>Sprocket Player for Apple TV and iPad. Free of servers, accounts and transcoders.</p>
+    <p>Sprocket Player for Apple TV and iPad. No subscription. No account with us. Your media, on your terms.</p>
     <div class="cta">
       <a class="btn primary" href="#" id="appstore-link" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.28-1.61 2.8-.41 6.93 1.16 9.2.77 1.11 1.68 2.36 2.87 2.31 1.16-.05 1.59-.75 2.99-.75 1.4 0 1.79.75 3.01.72 1.25-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.45-3.7zM14.1 5.86c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
@@ -397,6 +434,7 @@
       <a class="btn" href="/en/support.html">Get support</a>
     </div>
     <p class="note" style="margin-top:1rem;font-size:0.85rem;color:var(--faint)">App Store link coming soon.</p>
+    <p class="note" style="margin-top:0.4rem;font-size:0.85rem;color:var(--faint)">Available in English, French, German, Italian, Spanish and Japanese.</p>
   </div>
 </section>
 
@@ -404,17 +442,17 @@
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin and Kodi are trademarks of their respective owners.</div>
+    <div>© <span id="year">2026</span> Sprocket Player. Apple TV, iPad and Siri are trademarks of Apple Inc. Plex, Jellyfin, Emby and Kodi are trademarks of their respective owners.</div>
     <nav>
       <a href="/en/">Home</a>
       <a href="/en/support.html">Support</a>
       <a href="/en/privacy.html">Privacy</a>
-      <a href="mailto:support@sprocketplayer.com">Contact</a>
+      <a href="/en/support.html#contact">Contact</a>
     </nav>
   </div>
 </footer>
 
-<script src="/assets/js/site.js"></script>
+<script src="/assets/js/site.js?v=b0d3a0cc"></script>
 
 </body>
 </html>

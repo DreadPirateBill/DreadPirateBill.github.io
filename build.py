@@ -20,6 +20,7 @@ Template syntax (deliberately tiny, no dependencies):
                                  string for that key
     {{lang}} {{page}} {{page_path}} {{site}}   built-in variables
     {{hreflang}}                 <link rel="alternate"> block for this page
+    {{asset_v}}                  content hash of the CSS + JS, for cache-busting query strings
     {{lang_options}}             <option> list for the language switcher
 
 Catalog keys beginning with "_" are ignored (use them for notes).
@@ -28,6 +29,7 @@ prints a per-language coverage summary so you can see what still needs
 translating.
 """
 
+import hashlib
 import json
 import re
 import sys
@@ -55,6 +57,14 @@ TPL_REDIRECT = ROOT / "templates" / "redirect.html"
 I18N = ROOT / "i18n"
 
 TOKEN = re.compile(r"\{\{\s*(.*?)\s*\}\}")
+
+
+def asset_version() -> str:
+    """Short hash of the CSS and JS, appended to their URLs so browsers refetch them after a change."""
+    h = hashlib.sha1()
+    for rel in ("assets/css/style.css", "assets/js/site.js"):
+        h.update((ROOT / rel).read_bytes())
+    return h.hexdigest()[:8]
 
 
 def load_catalog(lang: str) -> dict:
@@ -101,6 +111,7 @@ class Renderer:
             "site": SITE,
             "hreflang": hreflang_block(page),
             "lang_options": lang_options(lang),
+            "asset_v": asset_version(),
         }
 
     def lookup(self, key: str) -> str:

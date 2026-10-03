@@ -33,11 +33,11 @@
         <p>{{support.faq.body}}</p>
         <a class="btn sm" href="#faq">{{support.faq.cta}}</a>
       </div>
-      <div class="support-card">
+      <div class="support-card" id="contact">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7a8cff" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
         <h2>{{support.contact.title}}</h2>
         <p>{{support.contact.body}}</p>
-        <a class="btn sm primary" href="mailto:support@sprocketplayer.com">support@sprocketplayer.com</a>
+        <a class="btn sm primary email" data-u="support" data-d="sprocketplayer.com" href="#contact">support [at] sprocketplayer.com</a>
       </div>
     </div>
 
@@ -60,13 +60,21 @@
           <p>{{support.faq.a3}}</p>
         </details>
         <details>
+          <summary>{{support.faq.q5}}</summary>
+          <p>{{support.faq.a5}}</p>
+        </details>
+        <details>
+          <summary>{{support.faq.q6}}</summary>
+          <p>{{support.faq.a6}}</p>
+        </details>
+        <details>
           <summary>{{support.faq.q4}}</summary>
           <p>{{support.faq.a4}} <a href="/{{lang}}/privacy.html">{{support.faq.a4_link}}</a> {{support.faq.a4_after}}</p>
         </details>
       </div>
 
       <h2>{{support.policy.title}}</h2>
-      <p>{{support.policy.body}} <a href="/{{lang}}/privacy.html">sprocketplayer.com/{{lang}}/privacy.html</a>.</p>
+      <p>{{support.policy.body}} <a href="/{{lang}}/privacy.html">sprocketplayer.com/{{lang}}/privacy.html</a>{{punct.period}}</p>
     </div>
   </div>
 </main>

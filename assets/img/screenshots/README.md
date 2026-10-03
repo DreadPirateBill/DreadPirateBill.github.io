@@ -8,15 +8,16 @@ iPad shots: landscape, any current iPad; the frame on the site is 4:3 so 2732×2
 
 | File | Where it appears | What to show |
 |---|---|---|
-| `hero-library.png` | Hero, top of the home page | The library browser with plenty of poster art. This is the money shot. |
-| `library-show.png` | "Companion to Plex, Jellyfin and Kodi" | A TV show or season view with fanart, episode thumbnails and plot summaries. |
+| `hero-library.png` | Hero, top of the home page | The library browser with plenty of poster art. A Jellyfin or Plex movie library is the easiest way to get there. This is the money shot. |
+| `library-show.png` | "Plays nicely with Plex, Jellyfin and Emby" | A TV show or season view with fanart, episode thumbnails and plot summaries, from a server or a Kodi-scraped share. |
 | `player-skip-intro.png` | "Skip the intro" | Playback mid-title-sequence with the **Skip Intro** button visible. Transport controls hidden if possible. |
-| `player-tracks.png` | "No transcoding" | Full-screen video with the audio / subtitle track picker open. A multi-track MKV is ideal. |
-| `sources-setup.png` | "Privacy first" | Either the Add Source form showing the PIN field, or Options → Privacy showing the disconnect settings. |
+| `player-tracks.png` | "The file you have is the file you watch" | Full-screen video with the audio / subtitle track picker open. A multi-track MKV is ideal. |
+| `sources-setup.png` | "Privacy first" | The Add Source form showing its QR code and "Or scan to fill this in on your phone", or Options → Privacy. |
 | `ipad-library.png` | Gallery | iPad, landscape, library browser with posters. |
 | `ipad-photos.png` | Gallery | iPad, landscape, a photo grid or a comic / PDF open in the reader. |
 | `photos-gallery.png` | Gallery | Apple TV, a photo folder or slideshow. |
 | `documents-comic.png` | Gallery | Apple TV, a CBZ/CBR or PDF page open full-screen. |
+| `sign-in-code.png` | Gallery | Apple TV, the Plex or Jellyfin code sign-in screen: short code, QR code, "Waiting for approval…". |
 
 Tips:
 - Use content you have the rights to show publicly, or content whose artwork you're comfortable having on the site.
